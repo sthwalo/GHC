@@ -14,7 +14,7 @@ export function Footer() {
             </div>
             <p className="text-gray-400">
               Empowering businesses through comprehensive solutions in software,
-              accounting, transport, and electronics.
+              administrative consultancy, transport, and electronics.
             </p>
           </div>
 
