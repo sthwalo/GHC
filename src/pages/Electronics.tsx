@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Smartphone, Laptop, Monitor, ArrowRight } from 'lucide-react';
+import { Cpu, Smartphone, Laptop, Monitor, Music, Guitar, ArrowRight } from 'lucide-react';
 import { ServiceHero } from '../components/ServiceHero';
 import { Link } from 'react-router-dom';
 
@@ -23,8 +23,27 @@ export function Electronics() {
     },
   ];
 
+  const musicalInstruments = [
+    {
+      icon: Music,
+      title: 'Keyboards',
+      description: 'High-quality keyboards for professional and hobby musicians',
+    },
+    {
+      icon: Guitar,
+      title: 'Guitars',
+      description: 'Acoustic, electric, and bass guitars available',
+    },
+    {
+      icon: Music,
+      title: 'Drums & Percussion',
+      description: 'Full drum sets, cymbals, and accessories',
+    },
+  ];
+
   return (
     <div>
+      {/* Electronics Hero Section */}
       <ServiceHero
         title="Electronics Resell"
         description="Quality electronics at competitive prices"
@@ -32,6 +51,7 @@ export function Electronics() {
         imageSrc="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80"
       />
 
+      {/* Electronics Products Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -54,6 +74,38 @@ export function Electronics() {
         </div>
       </section>
 
+      {/* Musical Instruments Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Musical Instruments
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Discover our collection of quality musical instruments
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {musicalInstruments.map((instrument, index) => (
+              <motion.div
+                key={instrument.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-lg p-8 shadow-lg"
+              >
+                <instrument.icon className="h-12 w-12 text-blue-600 mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {instrument.title}
+                </h3>
+                <p className="text-gray-600">{instrument.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Buy From Us Section */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -87,10 +139,11 @@ export function Electronics() {
         </div>
       </section>
 
+      {/* Call to Action Section */}
       <section className="bg-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Looking for Specific Electronics?
+            Looking for Specific Electronics or Instruments?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
             Browse our inventory or let us know what you need
