@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, Linkedin, Facebook, Twitter, Instagram, MessageSquare } from 'lucide-react';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +23,14 @@ export function Navbar() {
     { path: '/contact', label: 'Contact' },
   ];
 
+  const socialLinks = [
+    { icon: Linkedin, url: 'https://www.linkedin.com', label: 'LinkedIn' },
+    { icon: MessageSquare, url: 'https://wa.me/27733685971', label: 'WhatsApp' },
+    { icon: Twitter, url: 'https://twitter.com', label: 'X' },
+    { icon: Instagram, url: 'https://www.instagram.com', label: 'Instagram' },
+    { icon: Facebook, url: 'https://www.facebook.com', label: 'Facebook' },
+  ];
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
@@ -34,7 +42,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map(({ path, label }) => (
               <Link
                 key={path}
@@ -47,6 +55,22 @@ export function Navbar() {
               >
                 {label}
               </Link>
+            ))}
+          </div>
+
+          {/* Social Media Links */}
+          <div className="hidden md:flex items-center space-x-4">
+            {socialLinks.map(({ icon: Icon, url, label }) => (
+              <a
+                key={label}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+              >
+                <Icon className="h-5 w-5" />
+              </a>
             ))}
           </div>
 
@@ -79,6 +103,20 @@ export function Navbar() {
                   {label}
                 </Link>
               ))}
+              <div className="flex space-x-4 mt-4">
+                {socialLinks.map(({ icon: Icon, url, label }) => (
+                  <a
+                    key={label}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         )}
