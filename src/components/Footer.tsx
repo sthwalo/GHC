@@ -57,7 +57,7 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-400">124 Van Beek Street, Office 227 New Doornfontein 2094</span>
+                <span className="text-gray-400">Office 227 Johannesburg Stadium 124 Van Beek Street New Doornfontein 2094</span>
               </li>
             </ul>
           </div>

@@ -1,26 +1,61 @@
 {
   "compilerOptions": {
+    // Paths for storing TypeScript build info files
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+    // Specify ECMAScript target version
     "target": "ES2020",
+
+    // Enforces use of `define` semantics for class fields
     "useDefineForClassFields": true,
+
+    // Libraries to include in the compilation
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
+
+    // Module system to use
     "module": "ESNext",
+
+    // Skips checking of library declaration files for faster builds
     "skipLibCheck": true,
 
-    /* Bundler mode */
+    /* Bundler mode settings */
+    
+    // Resolves modules for bundler mode, often required by modern bundlers
     "moduleResolution": "Bundler",
+
+    // Allows importing TypeScript files with extensions
     "allowImportingTsExtensions": true,
+
+    // Ensures each file is treated as a separate module
     "isolatedModules": true,
+
+    // Requires all modules to use an import/export, helps avoid unintentional global modules
     "moduleDetection": "force",
+
+    // Prevents TypeScript from generating any output files
     "noEmit": true,
+
+    // Enables React JSX syntax (using React 17+ JSX transform)
     "jsx": "react-jsx",
 
-    /* Linting */
+    /* Linting and error-checking configurations */
+    
+    // Enables all strict type-checking options
     "strict": true,
+
+    // Warns on declared but unused local variables
     "noUnusedLocals": true,
+
+    // Warns on declared but unused function parameters
     "noUnusedParameters": true,
+
+    // Prevents case fallthrough in switch statements, avoiding unintentional bugs
     "noFallthroughCasesInSwitch": true,
+
+    // Ensures imports with side effects are explicitly marked, making intentions clear
     "noUncheckedSideEffectImports": true
   },
+  
+  // Includes the `src` directory for TypeScript to check
   "include": ["src"]
 }

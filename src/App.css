@@ -1,24 +1,31 @@
+/* Global Styles - Adjustments to align with the Global Hope Logo color scheme */
+
+/* Root Container */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #F2F2F2; /* Light Gray background */
 }
 
+/* Logo Styling - Updated color scheme to #0A3459 */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  /* Hover effect color updated to project color #0A3459 */
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #0A3459AA); /* Primary Blue shadow */
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #192E40AA); /* Dark Blue shadow */
+  filter: drop-shadow(0 0 2em #0A3459);
 }
 
+/* Updated secondary logo hover effect to match React color */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa); /* React logo color retained */
+}
+
+/* Keyframes for Logo Spin Animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -28,19 +35,29 @@
   }
 }
 
+/* Reduced motion check - Retain animation for non-motion-reduced preference */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* Card Styling */
 .card {
   padding: 2em;
-  background-color: #FFFFFF; /* White background for card */
-  border: 1px solid #8C8C8C; /* Medium Gray border */
-  color: #0D0D0D; /* Dark Gray text */
+  background-color: #F2F2F2; /* Updated to match color theme background */
+  color: #0D0D0D; /* Updated text color for better contrast */
 }
 
-.read-the-docs {
-  color: #8C8C8C; /* Medium Gray text */
-};
+/* Documentation for colors chosen based on Adobe Color Theme:
+   - Primary Dark Blue: #0A3459
+   - Secondary Dark Blue: #192E40
+   - Light Grey Background: #F2F2F2
+   - Medium Grey for Text: #8C8C8C
+   - Dark Grey Text: #0D0D0D
+*/
+
+/* Documentation Note: Adjusted default color palette for Tailwind
+   within the Tailwind configuration file (tailwind.config.js).
+   These colors are globally accessible and consistent with the brand theme.
+*/
