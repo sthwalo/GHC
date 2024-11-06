@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe, Linkedin, Facebook, Twitter, Instagram, MessageSquare } from 'lucide-react';
+import { Menu, X, Linkedin, Facebook, Twitter, Instagram, MessageSquare } from 'lucide-react';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,11 +24,11 @@ export function Navbar() {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, url: 'https://www.linkedin.com', label: 'LinkedIn' },
+    { icon: Linkedin, url: 'https://www.linkedin.com/company/100598195', label: 'LinkedIn' },
     { icon: MessageSquare, url: 'https://wa.me/27733685971', label: 'WhatsApp' },
-    { icon: Twitter, url: 'https://twitter.com', label: 'X' },
-    { icon: Instagram, url: 'https://www.instagram.com', label: 'Instagram' },
-    { icon: Facebook, url: 'https://www.facebook.com', label: 'Facebook' },
+    { icon: Twitter, url: 'https://x.com/nyoniimma', label: 'X' },
+    { icon: Instagram, url: 'https://www.instagram.com/prochyld/', label: 'Instagram' },
+    { icon: Facebook, url: 'https://www.facebook.com/ghconsort', label: 'Facebook' },
   ];
 
   return (
