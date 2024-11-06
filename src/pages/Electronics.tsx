@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Smartphone, Laptop, Monitor, Music, Guitar, ArrowRight } from 'lucide-react';
+import { Cpu, Smartphone, Laptop, Monitor, Music, Guitar, Speaker, ArrowRight } from 'lucide-react';
 import { ServiceHero } from '../components/ServiceHero';
 import { Link } from 'react-router-dom';
 
@@ -33,6 +33,11 @@ export function Electronics() {
       icon: Guitar,
       title: 'Guitars',
       description: 'Acoustic, electric, and bass guitars available',
+    },
+    {
+      icon: Speaker,
+      title: 'PA Systems',
+      description: 'Complete PA systems for various setups and installations',
     },
     {
       icon: Music,
@@ -82,7 +87,7 @@ export function Electronics() {
               Musical Instruments
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Discover our collection of quality musical instruments
+              Discover our collection of quality musical instruments and sound systems
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
