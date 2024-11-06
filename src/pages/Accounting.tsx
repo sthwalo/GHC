@@ -1,10 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calculator, FileText, TrendingUp, PieChart, ArrowRight } from 'lucide-react';
+import { Calculator, FileText, TrendingUp, PieChart, ArrowRight, Briefcase } from 'lucide-react';
 import { ServiceHero } from '../components/ServiceHero';
 import { Link } from 'react-router-dom';
 
+/**
+ * Component for the Accounting page
+ * This page provides an overview of accounting and administrative consultancy services.
+ */
 export function Accounting() {
+  // Define the list of services offered within accounting consultancy
   const services = [
     {
       icon: FileText,
@@ -21,17 +26,24 @@ export function Accounting() {
       title: 'Financial Analysis',
       description: 'Comprehensive financial reporting and analysis',
     },
+    {
+      icon: Briefcase,
+      title: 'Administrative Services',
+      description: 'Streamlined business administration and support',
+    },
   ];
 
   return (
     <div>
+      {/* Hero section for the page with title, description, icon, and background image */}
       <ServiceHero
-        title="Accounting Consultancy"
-        description="Professional financial guidance for your business"
+        title="Accounting & Consultancy"
+        description="Comprehensive financial and administrative guidance for your business"
         icon={Calculator}
         imageSrc="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80"
       />
 
+      {/* Services section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -54,6 +66,7 @@ export function Accounting() {
         </div>
       </section>
 
+      {/* Why Choose Us section */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -61,7 +74,7 @@ export function Accounting() {
               Why Choose Us?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Expert financial guidance tailored to your business needs
+              Expert financial and administrative guidance tailored to your business needs
             </p>
           </div>
 
@@ -85,13 +98,14 @@ export function Accounting() {
         </div>
       </section>
 
+      {/* Call to Action Section */}
       <section className="bg-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Need Financial Guidance?
+            Need Financial or Tax Administrative Guidance?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how we can help optimize your business finances
+            Let's discuss how we can help optimize your business finances and administration
           </p>
           <Link
             to="/contact"
@@ -105,3 +119,24 @@ export function Accounting() {
     </div>
   );
 }
+
+/**
+ * Additional Documentation and Customization Options:
+ *
+ * 1. **Service List**:
+ *    - Modify or add to the `services` array to update the list of services offered.
+ *    - Each service requires an `icon`, `title`, and `description`.
+ *
+ * 2. **Hero Section**:
+ *    - The `ServiceHero` component allows customization of the page's hero section.
+ *    - Adjust the `title`, `description`, `icon`, and `imageSrc` to fit the service.
+ *
+ * 3. **Why Choose Us Section**:
+ *    - The list of features under "Why Choose Us" is defined inline.
+ *    - Add or update values in the `features` array to modify.
+ *
+ * 4. **Call to Action Section**:
+ *    - The call-to-action invites clients to schedule a consultation.
+ *    - Modify the `to` attribute of `Link` if you want to redirect to a different page.
+ *    - Adjust text, button styling, or icon based on design preferences.
+ */

@@ -90,14 +90,14 @@ export function Contact() {
                   <Mail className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
                     <h3 className="font-medium text-gray-900">Email</h3>
-                    <p className="text-gray-600">info@globalhope.com</p>
+                    <p className="text-gray-600">info@ghcons.com</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <Phone className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
                     <h3 className="font-medium text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+27 73 368-5971</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -105,8 +105,8 @@ export function Contact() {
                   <div>
                     <h3 className="font-medium text-gray-900">Address</h3>
                     <p className="text-gray-600">
-                      123 Business Ave, Suite 100<br />
-                      New York, NY 10001
+                    124 Van Beek Street, Office 227  <br />
+                    New Doornfontein 2094
                     </p>
                   </div>
                 </div>
@@ -122,10 +122,10 @@ export function Contact() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Saturday</span>
-                  <span className="font-medium">10:00 AM - 4:00 PM</span>
+                  <span className="font-medium">10:00 AM - 2:00 PM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Sunday</span>
+                  <span className="text-gray-600">Sunday/Public Holidays</span>
                   <span className="font-medium">Closed</span>
                 </div>
               </div>
