@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Truck, Plane, Ship, Package, ArrowRight } from 'lucide-react';
+import { Truck, Plane, Ship, Package, Car, ArrowRight } from 'lucide-react';
 import { ServiceHero } from '../components/ServiceHero';
 import { Link } from 'react-router-dom';
 
@@ -21,6 +21,11 @@ export function Transport() {
       title: 'Logistics',
       description: 'Complete supply chain management',
     },
+    {
+      icon: Car,
+      title: 'Shuttle Services',
+      description: 'Airport transfers, tours, and Southern Africa destinations',
+    },
   ];
 
   return (
@@ -34,7 +39,7 @@ export function Transport() {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -66,7 +71,7 @@ export function Transport() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {['North America', 'Europe', 'Asia', 'Australia'].map((region) => (
+            {['North America', 'Europe', 'Asia', 'Australia', 'Southern Africa'].map((region) => (
               <div key={region} className="text-center">
                 <div className="w-20 h-20 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
                   <Plane className="h-10 w-10 text-blue-600" />
@@ -81,10 +86,10 @@ export function Transport() {
       <section className="bg-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Ship?
+            Ready to Ship or Take a Shuttle?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Get in touch for competitive shipping rates
+            Get in touch for competitive shipping rates or shuttle service bookings
           </p>
           <Link
             to="/contact"
