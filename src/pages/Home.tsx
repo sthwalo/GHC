@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Code, Calculator, Truck, Cpu } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BannerImage from '../components/BannerImage';
 
 export function Home() {
   const services = [
@@ -32,49 +33,49 @@ export function Home() {
   ];
 
   return (
-    <div className="overflow-hidden">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center">
+      <section className="relative h-screen">
+        {/* Banner Container */}
         <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
-            alt="Hero background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gray-900/70" />
+          <BannerImage className="w-full h-full" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
-            Welcome to Global Hope Consortium
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto"
-          >
-            Your one-stop solution for software development, accounting,
-            transport services, and electronics
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:text-lg"
+        {/* Content Container */}
+        <div className="relative z-10 h-full flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-6xl font-bold text-white mb-6"
             >
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </motion.div>
+              Welcome to Global Hope Consortium
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto"
+            >
+              Your one-stop solution for software development, accounting,
+              transport services, and electronics
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:text-lg"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -119,21 +120,7 @@ export function Home() {
 
       {/* CTA Section */}
       <section className="bg-blue-600 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's work together to achieve your goals and drive success
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-blue-600 transition-colors duration-200 md:text-lg"
-          >
-            Contact Us Today
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
+        {/* Add your CTA content here */}
       </section>
     </div>
   );

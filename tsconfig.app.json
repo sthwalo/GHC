@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    // Enable incremental compilation
+    "incremental": true,
+
     // Paths for storing TypeScript build info files
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 
